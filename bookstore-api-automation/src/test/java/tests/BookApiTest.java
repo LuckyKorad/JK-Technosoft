@@ -18,7 +18,7 @@ public class BookApiTest extends BaseTest {
         String email = "apitestuser@test.com";
         String password = "password123";
 
-        // 🔹 Try signup
+        //  Try signup
         given()
             .contentType(ContentType.JSON)
             .body("{\"id\":0," +
@@ -29,7 +29,7 @@ public class BookApiTest extends BaseTest {
         .then()
             .statusCode(anyOf(is(200), is(400))); // 200=new user, 400=already exists
 
-        // 🔹 Login
+        //  Login
         token =
         given()
             .contentType(ContentType.JSON)
